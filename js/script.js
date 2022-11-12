@@ -18,7 +18,7 @@ async function replay() {
         await axios.get(`https://api-monkedev.herokuapp.com/fun/chat?msg=${req}`).then(data => {
             res = JSON.stringify(data.data.response)
         })
-
+        speak(res, { speed: 160 })
         let msg_req = document.createElement("div");
         let msg_res = document.createElement("div");
 
